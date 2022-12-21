@@ -1,4 +1,4 @@
-# Document Wiper Client for macOS
+# Remote Wiper Client for macOS
 
 ## Features
 
