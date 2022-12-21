@@ -20,3 +20,7 @@ Additional you need setup the ```webHooks``` arrays that points to your server.
 pip3 install -r requirement.txt
 sudo python3 wiper.py
 ```
+
+## Notice
+
+There maybe some code Commentted for security reason during develop. Please remove those Comment to make the Wipe Work!
