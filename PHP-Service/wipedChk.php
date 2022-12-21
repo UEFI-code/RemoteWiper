@@ -2,6 +2,7 @@
 $fp = fopen('wipeFlag.txt', 'r');
 if ($fp) {
     fclose($fp);
+    unlink('LetsWipe.php');
     echo 'Congratulations! Your device succese recieve wipe signal!';
 }
 else {
