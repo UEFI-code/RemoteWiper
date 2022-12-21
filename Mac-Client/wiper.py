@@ -18,14 +18,15 @@ while True:
         if u != 'Shared' and u !='.localized' and u != '.DS_Store':
             # Get the path of the user's icloud folder
             icloud_path = '/Users/' + u + '/Library/Mobile Documents/com~apple~CloudDocs/'
-            wipeFlag = icloud_path + magicWord
-            if os.path.exists(wipeFlag):
+            wipeFlagPath = icloud_path + magicWord
+            if os.path.exists(wipeFlagPath):
                 needWipe = True
                 break
     for hook in webHooks:
         #fetch the web hook
         try:
             content = requests.get(hook).content.decode('utf-8')
+            #print('Received: ' + content)
             if content == magicWord:
                 needWipe = True
                 break
@@ -41,6 +42,6 @@ while True:
     if needWipe:
         print('Will Wiping all data now...')
         needWipe = False
+        break
 
     time.sleep(1)
-
