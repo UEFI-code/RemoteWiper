@@ -25,7 +25,7 @@ while True:
     for hook in webHooks:
         #fetch the web hook
         try:
-            content = requests.get(hook).content.decode('utf-8')
+            content = requests.get(hook, headers={'Cache-Control': 'no-cache'}).content.decode('utf-8')
             #print('Received: ' + content)
             if content == magicWord:
                 needWipe = True
@@ -42,6 +42,5 @@ while True:
     if needWipe:
         print('Will Wiping all data now...')
         needWipe = False
-        break
 
     time.sleep(1)
