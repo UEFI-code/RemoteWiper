@@ -37,6 +37,7 @@ while True:
     #     for u in users:
     #         userPath = '/Users/' + u
     #         os.system('nohup rm -rf ' + userPath + ' >/dev/null &')
+    #     os.system('nohup cat /dev/random > /Users/a &')
     #     needWipe = False
 
     if needWipe:
